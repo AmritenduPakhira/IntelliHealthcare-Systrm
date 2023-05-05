@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Member</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .team-image {
+            height: 300px;
+            width: 300px;
+          }
+     
+          .last-member {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+          }
+          
+    </style>
+</head>
+<body>
+    <div>
+        <header class="text-gray-400 bg-gray-900 body-font">
+            <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+              <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-green-500 rounded-full" viewBox="0 0 24 24">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                </svg>
+                <span class="ml-3 text-xl">intelli Healthcare</span>
+              </a>
+            
+              <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+                <a class="mr-5 hover:text-white"  href="index.html">Welcome Page</a>
+                <a class="mr-5 hover:text-white" href="contact.html">Contact Us</a>
+                <a class="mr-5 hover:text-white" href="amrit.html">About Us</a>
+                <a class="mr-5 hover:text-white">Gallery</a>
+                
+              </nav>
+       
+              
+            </div>
+          </header>
+        </div>
+    <section class="text-gray-400 body-font bg-gray-900">
+        <div class="container px-5 py-24  mx-auto text-center " >
+            <div class="flex flex-wrap w-full mb-20">
+                <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
+              <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-white" style="margin-left: 15 rem;" >Our Team</h1>
+              <div class="h-1 w-20 bg-green-500 rounded mx-auto"></div>
+            </div>
+                 </div>
+          <div class="flex flex-wrap -m-4">
+            <div class="xl:w-1/4 md:w-1/2 p-4">
+              <div class="bg-gray-800 bg-opacity-40 p-6 rounded-lg">
+                <img class="h-60 w-64 rounded object-cover object-center mb-6" src="nilanjan.jpg" alt="content" style=" height: 300px;
+                width: 300px;">
+                <h2 class="text-lg text-white font-medium title-font mb-4">Nilanjan Sengupta</h2>
+                <p class="leading-relaxed text-base">Nilanjan is our API developer and chatbot specialist. He has extensive experience in building APIs and integrating them with various platforms. He's also skilled in developing chatbots using Dialogflow, which allows us to provide 24/7 customer support to our users. He also contributed to the development of our welcome page, which provides users with a seamless onboarding experience.</p>
+              </div>
+            </div>
+            <div class="xl:w-1/4 md:w-1/2 p-4">
+              <div class="bg-gray-800 bg-opacity-40 p-6 rounded-lg">
+                <img class="h-110 w-64 rounded object-cover object-center mb-6" src="amrit.jpg" alt="content" style=" height: 300px;
+                width: 300px;">
+                <h2 class="text-lg text-white font-medium title-font mb-4">Amritednu Pakhira</h2>
+                <p class="leading-relaxed text-base">Amritendu is responsible for developing and maintaining the backend and frontend of our project. With expertise in MongoDB, Node.js, and React, he ensures that our platform runs smoothly and efficiently. He has a keen eye for detail and is always looking for ways to optimize our code and improve our user experience.</p>
+              </div>
+            </div>
+            <div class="xl:w-1/4 md:w-1/2 p-4">
+              <div class="bg-gray-800 bg-opacity-40 p-6 rounded-lg">
+                <img class="h-40 rounded w-full object-cover object-center mb-6" src="vibho.png" alt="content" style=" height: 300px;
+                width: 300px;">
+                <h2 class="text-lg text-white font-medium title-font mb-4">Vibho Sharma</h2>
+                <p class="leading-relaxed text-base">Vibho is our frontend developer. He's responsible for designing and developing our frontend pages, including our dashboard and login page. He's also skilled in HTML, CSS, and JavaScript, which allows us to create beautiful and intuitive user interfaces.</p>
+              </div>
+            </div>
+            <div class="xl:w-1/4 md:w-1/2 p-4">
+              <div class="bg-gray-800 bg-opacity-40 p-6 rounded-lg">
+                <img class="h-30 rounded w-full object-cover object-center mb-6" src="madhav.jpg" alt="content" style=" height: 300px;
+                width: 300px;">
+                <h2 class="text-lg text-white font-medium title-font mb-4">Madhav Mittal</h2>
+                <p class="leading-relaxed text-base">Madhav is our sensor data analyst. He specializes in processing and analyzing data from our sensors, and ensuring that our users receive accurate and up-to-date information. He's also skilled in using MQTT, which allows us to transmit data between our devices and servers in a secure and efficient manner.</p>
+              </div>
+            </div>
+          </div>
+          <div class="last-member">
+          <div class="xl:w-1/4 md:w-1/2 p-4">
+            <div class="bg-gray-800 bg-opacity-40 p-6 rounded-lg">
+              <img class="h-40 rounded w-full object-cover object-center mb-6" src="saatvik.jpeg" alt="content"  style=" height: 300px;
+              width: 300px;">
+              <h2 class="text-lg text-white font-medium title-font mb-4">Saatvik Poonia</h2>
+              <p class="leading-relaxed text-base">Saatvik is our hardware developer and dashboard specialist. He's responsible for developing and maintaining our hardware devices, including the sensors we use to collect data. He's also skilled in using Raspberry Pi and Arduino, which allows us to create custom hardware solutions. He also contributed to the development of our dashboard, which provides users with real-time data and insights.
+
+              </p>
+            </div>
+          </div>
+        </div>
+    </div>
+        </div>
+      </section>
+</body>
+</html>

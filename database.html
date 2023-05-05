@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Google Charts with Highcharts</title>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <style>
+      #chart-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+      }
+      #highchart_div, #googlechart_div {
+        width: 48%;
+        height: 400px;
+      }
+
+      h1{
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <h1>My Charts</h1>
+      
+    </nav>
+    <main>
+      <div id="chart-container">
+        <div id="highchart_div"></div>
+        <div id="googlechart_div"></div>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2023 My Charts. All rights reserved.</p>
+    </footer>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        // Get data from server
+        const data = [
+          ['Height (cm)', 'Pulse'],
+          [165, 75],
+          [170, 82],
+          [175, 80],
+          [180, 90],
+          [185, 85],
+          [190, 95]
+        ];
+
+        // Define Highcharts options
+        const options = {
+          chart: {
+            type: 'scatter',
+            zoomType: 'xy'
+          },
+          title: {
+            text: 'Height vs. Pulse'
+          },
+          xAxis: {
+            title: {
+              text: 'Height (cm)'
+            }
+          },
+          yAxis: {
+            title: {
+              text: 'Pulse'
+            }
+          },
+          series: [{
+            name: 'Data',
+            color: 'rgba(223, 83, 83, .5)',
+            data: data.slice(1).map(point => [point[0], point[1]])
+          }]
+        };
+
+        // Create Highcharts chart
+        Highcharts.chart('highchart_div', options);
+
+        // Create Google Chart from the same data
+        const googleData = google.visualization.arrayToDataTable(data);
+        const googleOptions = {
+          title: 'Height vs. Pulse',
+          hAxis: {
+            title: 'Height (cm)',
+            minValue: 160,
+            maxValue: 200
+          },
+          vAxis: {
+            title: 'Pulse',
+            minValue: 70,
+            maxValue: 100
+          },
+          legend: 'none'
+        };
+        const googleChart = new google.visualization.ScatterChart(document.getElementById('googlechart_div'));
+        googleChart.draw(googleData, googleOptions);
+      }
+    </script>
+  </body>
+</html>

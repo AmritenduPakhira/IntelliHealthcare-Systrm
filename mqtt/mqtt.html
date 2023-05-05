@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Weight Sensor Data</title>
+    <script src="https://cdn.jsdelivr.net/gh/toorshia/justgage/raphael-2.1.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/toorshia/justgage/justgage.js"></script>
+    <style>
+      /* Style for the gauge container */
+      .gauge-container {
+        width: 400px;
+        height: 400px;
+        display: inline-block;
+        margin: 20px;
+      }
+      
+      /* Style for the navbar */
+      nav {
+        background-color: #333;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+      }
+      .logo {
+        font-size: 24px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+      .navbar-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .navbar-links li {
+        margin-right: 20px;
+      }
+      .navbar-links a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">Weight Sensor Data</div>
+        <ul class="navbar-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/from.html">BMI calculator</a></li>
+          <li><a href="/database.html">Another Dashboard</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="gauge-container" id="gauge-container-3"></div>
+    <div class="gauge-container" id="gauge-container-2"></div>
+    <div class="gauge-container" id="gauge-container-1"></div>
+
+    <script>
+      // Fetch data from server
+      fetch('http://localhost:5001/sensor-data')
+        .then(response => response.json())
+        .then(data => {
+          if (!data || !Array.isArray(data)) {
+            console.log('Invalid data received from server');
+            return;
+          }
+
+          // Get the latest three weight values
+          const weightValues = data.slice(-3).map(item => item.weight);
+
+          // Create the gauges
+          weightValues.forEach((weightValue, index) => {
+            const gauge = new JustGage({
+              id: `gauge-container-${index + 1}`,
+              value: weightValue,
+              min: 0,
+              max: 1000,
+              title: `Weight ${index + 1}`,
+              label: 'kg',
+              levelColorsGradient: false
+            });
+          });
+        })
+        .catch(error => {
+          console.log('Error fetching data from server:', error);
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    function calculateBMI() {
+      // Get the input values
+      var weight = parseFloat(document.getElementById("weight").value);
+      var height = parseFloat(document.getElementById("height").value) / 100; // Convert to meters
+    
+      // Calculate the BMI
+      var bmi = weight / (height * height);
+    
+      // Display the result
+      document.getElementById("bmi-result").innerHTML = "Your BMI is: " + bmi.toFixed(1);
+    }
+    </script>
+    
+</head>
+<body>
+  <header class="text-gray-600 body-font">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-green-500 rounded-full" viewBox="0 0 24 24">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+        </svg>
+        <span class="ml-3 text-xl"></span>Carenetics
+      </a>
+      <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+        <a class="mr-5 hover:text-gray-900" href="/">Welcome Page</a>
+        <a class="mr-5 hover:text-gray-900" href="/contact.html">Contact Us</a>
+        <a class="mr-5 hover:text-gray-900" href="/gallery.html">Our Gallery</a>
+        <a class="mr-5 hover:text-gray-900" href="/Team.html">Team Member</a>
+      </nav>
+      
+    </div>
+  </header>
+  <section class="text-gray-600 body-font">
+    <div class="container px-5 py-24 mx-auto flex flex-col">
+      <div class="lg:w-4/6 mx-auto">
+        <div class="rounded-lg h-64 overflow-hidden">
+          <img alt="content" class="object-cover object-center h-full w-full" src="BMI.jpg">
+        </div>
+        <div class="flex flex-col sm:flex-row mt-10">
+          <div class="sm:w-1/3 text-center sm:pr-8 sm:py-8">
+            <div class="w-20 h-20 rounded-full inline-flex items-center justify-center bg-gray-200 text-gray-400">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10" viewBox="0 0 24 24">
+                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </div>
+            <div class="flex flex-col items-center text-center justify-center">
+              <h2 class="font-medium title-font mt-4 text-gray-900 text-lg">BMI calculator</h2>
+              <div class="w-12 h-1 bg-green-500 rounded mt-2 mb-4"></div>
+              <p class="text-base">A BMI (Body Mass Index) calculator is a tool that measures a person's body fat based on their weight and height.<form class="mt-4">
+                <label class="block text-gray-700 font-bold mb-2" for="weight">
+                  Weight (kg):
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="weight" type="number" step="0.1" placeholder="Enter your weight">
+                <label class="block text-gray-700 font-bold mb-2 mt-4" for="height">
+                  Height (cm):
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="height" type="number" step="0.1" placeholder="Enter your height">
+                <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mt-4" type="button" onclick="calculateBMI()">Calculate BMI</button>
+                <div id="bmi-result" class="mt-4"></div>
+              </form>
+            </div>
+            
+          </div>
+          <div class="sm:w-2/3 text-center py-8">
+            <a href="https://app.wotnot.io/bot-preview/6v59a9U2K28700515346710149BSX99J">
+              <img alt="content" class="object-cover object-center h-full w-full" src="https://www.internetandtechnologylaw.com/files/2019/06/iStock-872962368-chat-bots.jpg">
+            </a>
+          </div>
+          
+
+        </div>
+      </div>
+    </div>
+  </section>
+  
+</body>
+</html>
+

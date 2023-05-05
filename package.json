@@ -1,0 +1,15 @@
+{
+  "name": "groupproject",
+  "version": "1.0.0",
+  "description": "An IoT based Smart Healthcare System",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nilanjan Sengupta and Amritendy Pakhira",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "split-type": "^0.3.3"
+  }
+}

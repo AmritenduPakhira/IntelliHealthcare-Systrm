@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Jura:wght@500&family=Montserrat&family=Montserrat+Alternates&family=Roboto+Condensed:wght@300&display=swap');
+
+@font-face {
+    font-family: mainContent;
+    src: url('./fonts/OstrichSans-Bold.otf');
+}
+
+@font-face {
+    font-family: feelFree;
+    src: url("./fonts/FeelfreePersonalUseRegular-lg2Bw.ttf");
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* xx-------------------------------------------------NAVBAR STYLING-----------------------------------------------------xx */
+nav {
+    color: antiquewhite;
+    background-color: #003700;
+    text-align: right;
+    font-size: 15px;
+    padding: 15px 0px;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
+}
+
+nav ul {
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    right: 40px;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 16.5px;
+}
+
+nav li a {
+    text-decoration: none;
+    color: antiquewhite;
+    display: block;
+    padding: 10px;
+    letter-spacing: 5px;
+}
+
+nav li a:hover {
+    background-color: #005200;
+}
+
+nav img {
+    float: left;
+    height: 40px;
+    margin-left: 20px;
+}
+
+/* ------------------------------------------------------Body Styling------------------------------------------------- */
+body {
+    background-color: #f0ead3 !important;
+    font-family: 'Jura', sans-serif;
+    font-size: 20px;
+    position: relative;
+    text-align: center;
+}
+
+#Carenetics {
+    position: relative;
+    font-size: 130px;
+    color: #003d00;
+    text-align: center;
+    /* font-family: 'Jura', sans-serif; */
+    font-weight: 60;
+    margin-top: 20px;
+    letter-spacing: 10px;
+    /* animation: slidedown 2s ease; */
+    white-space: nowrap; 
+    overflow: hidden; 
+    animation: reveal 2s forwards;
+}
+
+@keyframes reveal {
+    0% {
+        /* transform: translateY(-50%); */
+        width: 0%;
+        /* opacity: 0; */
+    }
+
+    100% {
+        /* transform: translateY(0%); */
+        width: 100%;
+        /* opacity: 1; */
+    }
+}
+
+/* #Carenetics::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0;
+    background-color: #333;
+    position: absolute;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  #Carenetics:hover::after {
+    width: 100%;
+  } */
+#mobilePhone {
+    height: 900px;
+    position: absolute;
+    display: inline-block;
+    top: 200px;
+    right: 800px;
+    float: left;
+    animation: slideleft 2s ease;
+}
+
+@keyframes slideleft {
+    0% {
+        transform: translatex(-50%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translatex(0);
+        opacity: 1;
+    }
+}
+
+/* #mobilePhone:hover{
+    height: 1030px;
+} */
+.taglines {
+    position: relative;
+    right: 90px;
+    padding-right: 20px;
+}
+
+.taglines p {
+    font-size: 35px;
+    color: #3D8361;
+    text-align: center;
+    /* font-family: 'Jura', sans-serif; */
+    font-family: 'Dancing Script', sans-serif;
+    font-weight: 700;
+    position: relative;
+    top: -8px;
+    left: 800px;
+    letter-spacing: 2px;
+    display: inline-block;
+    /* margin-left:100px ; */
+}
+
+.taglines h4 {
+    font-size: 30px;
+    font-weight: 200;
+    letter-spacing: 3px;
+    text-align: left;
+    position: relative;
+    color: #1C6758;
+    top: 60px;
+    left: 750px;
+    width: 50%;
+    display: block;
+    padding-right: 100px;
+    /* font-family: mainContent, sans-serif; */
+
+}
+
+.taglines h4 ul li {
+    list-style: disc;
+    font-size: 25px;
+    font-weight: 1000;
+    color: #1C6758;
+    margin-top: 10px;
+
+}
+
+.taglines {
+    animation: fade 3s ease;
+}
+
+@keyframes fade {
+     0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+/* .comma{
+    font-family:'Dancing Script', cursive;
+    font-weight: bolder;
+    font-size: 35px;
+} */
+.char {
+    transform: translateY(115px);
+    transition: transform 0.5s;
+
+}
+footer img {
+    float: right;
+    margin-right: 20px;
+    height: 100px;
+    width: 100px;
+  }
+  
